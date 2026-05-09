@@ -207,6 +207,7 @@ obj
 
 # UCR
 context.xml
+/.tmp/
 
 # Rider
 *.iml

@@ -16,6 +16,8 @@ Universal Control Remapper is a Windows application which allows the end-user to
 - [Support / Discussion / Feedback](#support--discussion--feedback)
 - [Features](#features)
 - [Device support](#device-support)
+- [Development setup](#development-setup)
+- [Maintenance and security](#maintenance-and-security)
 - [License](#license)
 
 
@@ -74,10 +76,23 @@ UCR supports input and output devices through plugins using the [IOWrapper](http
 - Keyboard (using [interception](https://github.com/oblitum/Interception))
 - Mouse (using [interception](https://github.com/oblitum/Interception))
 
-## Building and Contributing ##
-It is required to run the build script before building with Visual Studio. Run `.\build.ps1 InitProject` from powershell to initialize the required dependencies. All subsequent builds can be done from Visual Studio 2017.
+## Development setup ##
 
-Please see  `CONTRIBUTING` when you've decided to contribute to Universal Control Remapper
+UCR currently targets .NET Framework 4.5.2 and is built on Windows.
+
+1. Install Visual Studio 2022 with the **.NET desktop development** workload.
+2. Initialize submodules and dependencies:
+   - PowerShell: `.\build.ps1 InitProject`
+   - Bash: `./build.sh InitProject`
+3. Open `UCR.sln` and build in Visual Studio.
+
+Please see `CONTRIBUTING.md` when you've decided to contribute to Universal Control Remapper.
+
+## Maintenance and security ##
+
+- Dependency update automation is configured through Dependabot in `.github/dependabot.yml`.
+- Security reporting and disclosure expectations are documented in `SECURITY.md`.
+- If you clone with submodules disabled, run `git submodule update --init --recursive` before building.
 
 ## License ##
 
