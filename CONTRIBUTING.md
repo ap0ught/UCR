@@ -12,14 +12,14 @@ The following is a set of guidelines for contributing to Universal Control Remap
 2. Create a new branch for your change, refer to [Branching](#branching)
 3. Commit changes to your own repository following the [Commit guidelines](#commit-guidelines)
 4. Note your changes in the `CHANGELOG.md`
-5. Create a pull request for your new branch targeting `UCR/develop`, refer to [Pull requests](#pull-requests) 
+5. Create a pull request for your new branch targeting `master`, refer to [Pull requests](#pull-requests) 
 
 
 
 
 ## Branching
 
-This repository is using GitFlow as branching strategy which means features and hotfixes are handled with branches. Contributions directly on the `develop` branch is only for minor changes and contributions directly to the `master` branch is prohibited, as it is considered the release branch. The name of your branch should be prefixed with one of the following prefixes depending on your change:
+This repository uses feature/hotfix branches for incoming work, and pull requests should target `master`. The name of your branch should be prefixed with one of the following prefixes depending on your change:
 
 - `feature/`: Prefix when you are **adding** new functionality
 - `hotfix/`: Prefix when you are **fixing** existing functionality
@@ -44,7 +44,7 @@ Commit message are just as important as the code it describes as it describes wh
 
 ## Pull requests
 
-Create a new pull request targeting `UCR/develop` when your `branch` is ready to be added. The pull request title should describe your change and the description should describe what has changed and why it was changed. Reference any issues or related pull requests in the description, if any.
+Create a new pull request targeting `master` when your `branch` is ready to be added. The pull request title should describe your change and the description should describe what has changed and why it was changed. Reference any issues or related pull requests in the description, if any.
 
 Pull request are checked by quality gates which needs to be passed before it is considered for merge. The change must build on the continuous integration Appveyor and any issues found by SonarQube should be fixed. Any required change should be committed on your own branch until quality gates are passing.
 
